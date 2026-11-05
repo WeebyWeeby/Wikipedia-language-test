@@ -1,0 +1,10 @@
+services:
+  playwright:
+    build: .
+    environment:
+      CI: "1"
+      WIKIPEDIA_USERNAME: ${WIKIPEDIA_USERNAME:-}
+      WIKIPEDIA_PASSWORD: ${WIKIPEDIA_PASSWORD:-}
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
