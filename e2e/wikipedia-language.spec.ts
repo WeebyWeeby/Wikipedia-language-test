@@ -56,6 +56,7 @@ test('Wikipedia EN interface language can be changed to Ukrainian and persists a
   });
   const languageSelect = page.locator('#mw-htmlform-i18n select[name="wplanguage"]');
   await expect(languageSelect).toBeAttached();
+  await expect(languageSelect).toHaveValue('en');
   await expect(languageSelect.locator('option[value="uk"]')).toHaveCount(1);
 
   const languageInput = internationalisationGroup.locator(
