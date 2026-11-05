@@ -24,7 +24,7 @@ async function expectLocalizedPreferencesLink(page: Page) {
   await expect(preferencesLink).toHaveAccessibleName(cyrillicText);
 }
 
-test('Wikipedia EN interface language can be changed to Ukrainian and persists after reopening', async ({
+test('Wikipedia EN to UA language change', async ({
   page,
   browser,
 }) => {
